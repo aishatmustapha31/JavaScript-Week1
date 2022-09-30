@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Loan Form
+                    </div>
+                    <div class="card-body">
+                        <form action class="row">
+                            <div class="col-6">
+                                <label for="" class="form-label">First Name</label>
+                                <input value="Glory" type="text" class="form-control" id="firstName">
+                            </div>
+                            <div class="col-6">
+                                <label for="" class="form-label">Last Name</label>
+                                <input value="King" type="text" class="form-control" id="lastName">
+                            </div>
+
+                            <div class="col-12">
+                                <label for="">Reason For Loan</label>
+                                <textarea class="form-control" name="reason" id="reason" cols="30" rows="3">Some Reasons</textarea>
+                            </div>
+                            <hr>
+
+                            <div class="col-6"> 
+                                <label for="" class="form-label">Amount</label>
+                                <input value="500000" type="number" class="form-control" id="amount">
+                            </div>
+
+                            <div class="col-6">
+                                <label for="" class="form-label">Number Of Months</label>
+                                <input value="6" type="number" class="form-control" id="numberOfMonths">
+                            </div>
+
+                            <div class="col-12">
+                                <button  onclick="submitForm()" type="button" class="btn btn-success float-end mt-3">Submit Form </button>
+                             </div>
+
+                             <div class="col-12">
+                                <div class="alert alert-success mt-3" id="output">
+                                    
+                                </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+<script src="./js/typeconversion-practice.js"></script>
+</body>
+</html>
