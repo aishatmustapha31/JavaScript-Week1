@@ -16,6 +16,11 @@ function submitForm(){
 
     let amount = document.getElementById("amount");
     let numberOfMonths = document.getElementById("numberOfMonths");
+    let age = document.getElementById("age");
+    let gender = document.getElementById("gender");
+
+
+    
 
     // console.log("FirstName = ", typeof firstName.value);
     // console.log("LastName = ", typeof lastName.value);
@@ -29,18 +34,43 @@ function submitForm(){
 
     let  monthsConverted = Number(numberOfMonths.value);
 
-    let intrest = amountConverted * 0.3 * monthsConverted; 
+    let interest = amountConverted * 0.3 * monthsConverted; 
 
-    let TotalAmount = amountConverted + intrest; 
+    let TotalAmount = amountConverted + interest; 
+
+    let interestForFemale= amountConverted *0.15* monthsConverted;
+
+    let Applicantage= age >=18
+    let iscorrectgender= "female"
+         iscorrectgender= "male"
+
+    //Interest For Female${interestForFemale}
+
 
     let message = `<h4>Hello ${firstName.value} ${lastName.value}</h4>`;
         message = message + `<h5>Loan Amount: ${amountConverted}</h5>`;
         message = message + `<h5>Duration ${monthsConverted} Months</h5>`;
-        message = message + `<h5>Intrest ${intrest} </h5>`;
+        if(iscorrectgender(female)){
+            message= message +`<h5>Interest For Female${interestForFemale}
+            </h5>`;
+        }else{
+            message= message + `<h5>Interest ${interest} </h5>`;
+        }
         message = message + `<h5>Total Payment = ${TotalAmount}</h5>`;
+        if(age >= 18){
+            message= message + `<h5>Qualified Candidate</h5>`;
+        }else{
+            message= message + `<h5>Candidate Not Qualified</h5>`
+        }
+        
+        
+
+      
 
    let output = document.getElementById("output");
    output.innerHTML = message;
+
+   
 
 }
 
